@@ -91,10 +91,15 @@ class SongResource(Resource):
             song_from_db.release_date = request.json['release_date']   
         if 'genre' in request.json:
             song_from_db.genre = request.json['genre']                   
-
             
         db.session.commit()
         return song_schema.dump(song_from_db)
+
+    def delete(self, song_id):
+        song_from_db = Song.query.get_or_404(song_id)
+        db.session.delete(song_from_db)
+        db.session.commit()
+        return '', 204
 
                         
 

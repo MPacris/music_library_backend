@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "ecb2b1df-3953-4680-ba12-db2e60844784",
+		"name": "music_library_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Songs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/songs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"songs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post New Song",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"{\r",
+							"        \"artist\": \"lynyrd_skynyrd\",\r",
+							"        \"release_date\": \"1973-08-13\",\r",
+							"        \"album\": \"pronounced_leh_nerd_skin_nerd\",\r",
+							"        \"id\": 6,\r",
+							"        \"title\": \"free_bird\",\r",
+							"        \"genre\": \"rock\"\r",
+							"    }\r",
+							"]"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"artist\": \"simon_and_garfunkel\",\r\n        \"release_date\": \"1970-01-26\",\r\n        \"album\": \"bridge_over_troubled_water\",\r\n        \"title\": \"the_only_living_boy_in_new_york\",\r\n        \"genre\": \"pop\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/songs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"songs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Song by Id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"{\r",
+							"        \"artist\": \"lynyrd_skynyrd\",\r",
+							"        \"release_date\": \"1973-08-13\",\r",
+							"        \"album\": \"pronounced_leh_nerd_skin_nerd\",\r",
+							"        \"id\": 6,\r",
+							"        \"title\": \"free_bird\",\r",
+							"        \"genre\": \"rock\"\r",
+							"    }\r",
+							"]"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/songs/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"songs",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Song by Id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"release_date\": \"1994-09-13\",\r\n        \"title\": \"hook\",\r\n        \"artist\": \"blues_travelers\",\r\n        \"album\": \"four\",\r\n        \"id\": 1,\r\n        \"genre\": \"college\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/songs/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"songs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Song by Id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"release_date\": \"1994-09-13\",\r\n        \"title\": \"hook\",\r\n        \"artist\": \"blues_travelers\",\r\n        \"album\": \"four\",\r\n        \"id\": 1,\r\n        \"genre\": \"college\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/songs/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"songs",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
