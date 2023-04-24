@@ -31,12 +31,14 @@ class Song(db.Model):
     artist = db.Column(db.String(255), nullable=False)
     album = db.Column(db.String(255))
     release_date = db.Column(db.Date)
-    genre = db.Column(db.String)
+    genre = db.Column(db.String(255))
 
     def __repr__(self):
         return f'{self.id} {self.title} {self.artist} {self.album} {self.release_date} {self.genre}'
 
 # Schemas
+
+
 
 # Resources
 
