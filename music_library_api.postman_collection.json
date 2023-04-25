@@ -179,7 +179,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n        \"release_date\": \"1994-09-13\",\r\n        \"title\": \"hook\",\r\n        \"artist\": \"blues_travelers\",\r\n        \"album\": \"four\",\r\n        \"id\": 1,\r\n        \"genre\": \"college\"\r\n    }",
+					"raw": "{\r\n    \"genre\": \"a_classic\",\r\n    \"release_date\": \"1994-09-13\",\r\n    \"title\": \"hook\",\r\n    \"album\": \"four\",\r\n    \"id\": 1,\r\n    \"artist\": \"blues_travelers\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -187,7 +187,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/songs/1",
+					"raw": "http://127.0.0.1:5000/api/songs/3",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -199,7 +199,7 @@
 					"path": [
 						"api",
 						"songs",
-						"1"
+						"3"
 					]
 				}
 			},

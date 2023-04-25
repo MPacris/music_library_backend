@@ -100,8 +100,7 @@ class SongResource(Resource):
         db.session.delete(song_from_db)
         db.session.commit()
         return '', 204
-
-                        
+                     
 
 
 
