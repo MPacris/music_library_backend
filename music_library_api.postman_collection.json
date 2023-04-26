@@ -63,7 +63,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"artist\": \"simon_and_garfunkel\",\r\n        \"release_date\": \"1970-01-26\",\r\n        \"album\": \"bridge_over_troubled_water\",\r\n        \"title\": \"the_only_living_boy_in_new_york\",\r\n        \"genre\": \"pop\"\r\n    }",
+					"raw": "{\r\n    \"genre\": \"test\",\r\n    \"artist\": \"test\",\r\n    \"album\": \"test\",\r\n    \"title\": \"test\"\r\n\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -134,7 +134,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/songs/3",
+					"raw": "http://127.0.0.1:5000/api/songs/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -146,7 +146,7 @@
 					"path": [
 						"api",
 						"songs",
-						"3"
+						"1"
 					]
 				}
 			},
@@ -179,7 +179,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"genre\": \"a_classic\",\r\n    \"release_date\": \"1994-09-13\",\r\n    \"title\": \"hook\",\r\n    \"album\": \"four\",\r\n    \"id\": 1,\r\n    \"artist\": \"blues_travelers\"\r\n}",
+					"raw": "{\r\n    \"likes\": \"10\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -187,7 +187,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/songs/3",
+					"raw": "http://127.0.0.1:5000/api/songs/4",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -199,7 +199,60 @@
 					"path": [
 						"api",
 						"songs",
-						"3"
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like song by id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/songs/13",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"songs",
+						"13"
 					]
 				}
 			},
@@ -240,7 +293,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/songs/6",
+					"raw": "http://127.0.0.1:5000/api/songs/12",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -252,7 +305,7 @@
 					"path": [
 						"api",
 						"songs",
-						"6"
+						"12"
 					]
 				}
 			},
